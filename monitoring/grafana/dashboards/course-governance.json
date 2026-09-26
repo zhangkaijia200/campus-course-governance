@@ -1,0 +1,30 @@
+{
+  "annotations": {"list": []},
+  "editable": true,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "HTTP Requests / sec",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [{"expr": "sum(rate(course_http_requests_total[1m]))", "legendFormat": "RPS"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "P95 Latency",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "targets": [{"expr": "histogram_quantile(0.95, sum(rate(course_http_request_duration_seconds_bucket[5m])) by (le))", "legendFormat": "p95"}]
+    },
+    {
+      "type": "timeseries",
+      "title": "Selection Results / sec",
+      "gridPos": {"h": 8, "w": 24, "x": 0, "y": 8},
+      "targets": [{"expr": "sum by (result) (rate(course_selection_results_total[1m]))", "legendFormat": "{{result}}"}]
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["course", "redis", "fastapi"],
+  "templating": {"list": []},
+  "time": {"from": "now-15m", "to": "now"},
+  "title": "Campus Course Governance",
+  "version": 1
+}

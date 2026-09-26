@@ -1,0 +1,30 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #e8eef7;
+  background: #07111f;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at top, #102746 0%, #07111f 45%, #050b13 100%); }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 56px 0 80px; }
+.hero { margin-bottom: 28px; }
+.eyebrow { letter-spacing: .16em; text-transform: uppercase; font-size: 12px; opacity: .62; }
+h1 { margin: 8px 0 12px; font-size: clamp(32px, 5vw, 58px); line-height: 1.03; }
+.hero p:last-child { color: #9fb0c6; }
+.panel, .card, .statusbar, .toast { border: 1px solid rgba(255,255,255,.09); background: rgba(11,24,42,.78); backdrop-filter: blur(14px); border-radius: 18px; }
+.login { max-width: 420px; padding: 22px; display: grid; gap: 12px; }
+input { width: 100%; padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: #081522; color: #fff; }
+button { border: 0; border-radius: 10px; padding: 11px 14px; background: #2f80ed; color: white; font-weight: 650; }
+button.secondary { background: #172b44; }
+button.ghost { background: transparent; border: 1px solid rgba(255,255,255,.12); }
+.statusbar { padding: 12px 16px; margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; color: #9fb0c6; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.card { padding: 20px; }
+.card h3 { margin: 10px 0 20px; }
+.course-code { font-size: 12px; letter-spacing: .1em; color: #72aef8; }
+.capacity { color: #9fb0c6; margin-bottom: 18px; }
+.capacity strong { color: white; font-size: 28px; }
+.actions { display: flex; gap: 8px; }
+.actions button { flex: 1; }
+.toast { margin-top: 18px; padding: 14px 16px; color: #c7d7ea; }
